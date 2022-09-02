@@ -3,6 +3,6 @@
 
 
 
-
-icon credits: https://www.flaticon.com/
-css, html credits: Author:agathaco, https://frontendin.com/css-weather-widget/
+*Credits:*
+- icons: https://www.flaticon.com/
+- css html: Author:agathaco, https://frontendin.com/css-weather-widget/
