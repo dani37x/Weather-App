@@ -29,9 +29,13 @@ def forecast():
     city_name = response['name']
     ikona = os.path.join(app.config['UPLOAD_FOLDER'],icon)
     list_to_send = state, description , temperature, wind, short_name, city_name, icon, humidity
-    return render_template('weather.html', list_to_send=list_to_send, city_name=city_name, ikona=ikona, description=description)
+    return render_template('weather.html', list_to_send=list_to_send, city_name=city_name, icon=icon, description=description)
   return render_template('form.html', form=form, )
 
+
+@app.route('/weather', methods=['GET', 'POST'])
+def result():
+  return render_template('weather.html', )
 
 
 @app.errorhandler(404)
