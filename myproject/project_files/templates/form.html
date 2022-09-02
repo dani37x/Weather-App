@@ -1,0 +1,17 @@
+<html>
+    <div id="title">  
+        {% block head %} 
+        <h1> Forecast weather </h1>
+        {% endblock %}
+    </div>
+    <div id="actions">
+        {% block content %}
+        <form method="post" action=''>
+            {{ form.csrf_token }}
+            <p> {{form.name.label}} {{form.name(placeholder='entry a city')}} </p>
+            <p> {{form.submit}} </p>
+        </form>
+        {% endblock %}
+    </div>
+
+ </html>

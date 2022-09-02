@@ -27,7 +27,7 @@ def forecast():
     wind = response['wind']['speed']
     short_name = response['sys']['country']
     city_name = response['name']
-    ikona = os.path.join(app.config['UPLOAD_FOLDER'],icon)
+    icon = os.path.join(app.config['UPLOAD_FOLDER'],icon)
     list_to_send = state, description , temperature, wind, short_name, city_name, icon, humidity
     return render_template('weather.html', list_to_send=list_to_send, city_name=city_name, icon=icon, description=description)
   return render_template('form.html', form=form, )
