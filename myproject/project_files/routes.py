@@ -2,7 +2,7 @@ from project_files import app
 from flask import Flask, render_template, url_for, redirect, flash
 from project_files.form import City
 from project_files.translator import lang_changer
-from project_files.key import Key
+from project_files.key import key
 import os
 import requests
 
@@ -13,7 +13,7 @@ def forecast():
   list_to_send = ()
   if form.validate_on_submit():
     city = form.name.data
-    url = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + Key
+    url = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + key
     response = requests.get(url).json()
     state = response['weather'][0]['main']
     icon = response['weather'][0]['icon']
