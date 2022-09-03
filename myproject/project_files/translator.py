@@ -1,3 +1,3 @@
 from translate import Translator
 
-translator = Translator(to_lang='pl')
+translator = Translator(to_lang='')
