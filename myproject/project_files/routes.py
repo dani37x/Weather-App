@@ -1,7 +1,7 @@
 from project_files import app
 from flask import Flask, render_template, url_for, redirect, flash
 from project_files.form import City
-from project_files.translator import translator
+from project_files.translator import lang_changer
 from project_files.key import Key
 import os
 import requests
@@ -19,8 +19,7 @@ def forecast():
     icon = response['weather'][0]['icon']
     icon = icon[0] + icon[1] + 'd.png'
     description = response['weather'][0]['description']
-    # translation = translator.translate(description)
-    # description = translation
+    # description = lang_changer(language='PL', content=description)
     temperature = round(int(response['main']['temp']) -  273,15)
     humidity = response['main']['humidity']
     wind = response['wind']['speed']

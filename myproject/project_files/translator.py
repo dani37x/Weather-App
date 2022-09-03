@@ -1,3 +1,8 @@
 from translate import Translator
 
-translator = Translator(to_lang='')
+
+
+def lang_changer(language, content):
+    change = Translator(to_lang=language)
+    translate_result = change.translate(content)
+    return translate_result
