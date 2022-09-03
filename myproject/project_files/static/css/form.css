@@ -7,7 +7,7 @@ body {
 #wrapper{
 
     width: 400px;
-    margin: 200px auto;
+    margin: 100px auto;
 }
 
 div {
@@ -45,6 +45,8 @@ div {
     border: none;
     text-align: center;
     font-size: 30px;
+    color: rgb(188, 188, 188);
+    -webkit-text-stroke: 0.2px black;
 }
 
 .button{
@@ -57,6 +59,7 @@ div {
     border: none;
     border-radius: 10px;
     background-color: #99edc3;
+    font-weight: 600;
 }
 
 form {

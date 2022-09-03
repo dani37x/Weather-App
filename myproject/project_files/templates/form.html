@@ -12,11 +12,11 @@
 	<div id="wrapper">
         <div class="card">
             <span class="city">
-                <h5> Enter City to see live weather </h5>
+                <h5> Enter city to see live weather </h5>
             </span>
             <form method="post" action=''>
                 {{ form.csrf_token }}
-                {{form.name(class="formula", placeholder="Rio de Janeiro")}} 
+                {{form.name(class="formula", placeholder="for example: Rio de Janeiro")}} 
                 {{form.submit(class="button")}}
             </form>
         </div>
