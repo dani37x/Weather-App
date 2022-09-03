@@ -1,1 +1,65 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+    background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+}
+
+#wrapper{
+
+    width: 400px;
+    margin: 200px auto;
+}
+
+div {
+    display: block;
+}
+
+.card{
+    width: 400px;
+    height: 200px;
+    font-family: 'Open Sans';
+    position: relative;
+}
+
+.formula{
+    width: 400px;
+    height: 55px;
+    background: rgb(41, 41, 41);
+    position: absolute;
+    left: 0px;
+    top: 95px;
+    border-radius: 10px;
+    border: none;
+    background-color: aliceblue;
+    font-size: 19px;
+    text-align: center;
+}
+
+.city{
+    width: 400px;
+    height: 65px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+.button{
+    width: 100px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    left: 150px;
+    top: 170px;
+    border: none;
+    border-radius: 10px;
+    background-color: #99edc3;
+}
+
+form {
+    background-color: aliceblue;
+    text-align: center;
+}

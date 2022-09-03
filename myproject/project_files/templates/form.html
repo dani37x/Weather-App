@@ -1,17 +1,26 @@
-<html>
-    <div id="title">  
-        {% block head %} 
-        <h1> Forecast weather </h1>
-        {% endblock %}
+<!DOCTYPE html>
+<html  lang="pl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="portfolio">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}" media="screen">
+    </head>
+    {% block content %} 
+	<body>
+	<div id="wrapper">
+        <div class="card">
+            <span class="city">
+                <h5> Enter City to see live weather </h5>
+            </span>
+            <form method="post" action=''>
+                {{ form.csrf_token }}
+                {{form.name(class="formula", placeholder="Rio de Janeiro")}} 
+                {{form.submit(class="button")}}
+            </form>
+        </div>
     </div>
-    <div id="actions">
-        {% block content %}
-        <form method="post" action=''>
-            {{ form.csrf_token }}
-            <p> {{form.name.label}} {{form.name(placeholder='entry a city')}} </p>
-            <p> {{form.submit}} </p>
-        </form>
-        {% endblock %}
-    </div>
-
- </html>
+	</body>
+    {% endblock %}
+</html>
